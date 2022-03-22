@@ -2,12 +2,17 @@
 	// TODO: add  count timer
 	// TODO: add nav bar
 
+	let countDown = true;
+
 	const weddingDate = new Date('2023-04-01');
 
 	const calculateDays = () => {
 		let today = new Date();
 
-		return Math.floor((weddingDate - today) / (1000 * 60 * 60 * 24));
+		const daysLeft = Math.floor((weddingDate - today) / (1000 * 60 * 60 * 24));
+
+		if (daysLeft > 0) return daysLeft;
+		else return (countDown = false);
 	};
 </script>
 
@@ -17,11 +22,13 @@
 	</div>
 
 	<div class="hero">
-		<div class="hero-content text-center mt-0">
+		<div class="hero-content text-center uppercase">
 			<div class="max-w-md">
-				<h1 class="text-5xl ">JOHN & JADE</h1>
-				<p class="pt-6">APRIL 1, 2023 • MANTECA, CA</p>
-				<p class="">{calculateDays()} DAYS TO GO!</p>
+				<h1 class="text-5xl">John & Jade</h1>
+				<p class="pt-6">April 1, 2023 • Manteca, CA</p>
+				<p class="">
+					{countDown ? `${calculateDays()} days to go!` : 'We are on our honeymoon now!'}
+				</p>
 			</div>
 		</div>
 	</div>

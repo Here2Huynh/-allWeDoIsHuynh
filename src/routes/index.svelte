@@ -33,6 +33,19 @@
 		</div>
 	</div>
 
+	<div class="navbar bg-base-100">
+		<div class="navbar-start" />
+		<div class="navbar-center hidden lg:flex">
+			<ul class="menu menu-horizontal p-0">
+				<li><a>Our Story</a></li>
+				<li><a>Photos</a></li>
+				<li><a>Itinerary</a></li>
+				<li><a>Seating Map</a></li>
+			</ul>
+		</div>
+		<div class="navbar-end" />
+	</div>
+
 	<footer class="footer absolute inset-x-0 bottom-0">
 		<img src="/static/lilac-bottom.webp" alt="lilac-top" />
 	</footer>
